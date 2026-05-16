@@ -1,0 +1,302 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --accent: #7b9be0;
+  --muted: #6b7280;
+  --text: #111827;
+}
+
+html.dark {
+  --accent: #a5c9ff;
+  --muted: #9ca3af;
+  --text: #f3f4f6;
+}
+
+html,
+body {
+  height: 100%;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+body {
+  font-size: 16px;
+  color: var(--text);
+  background: white;
+  transition: background-color 0.2s, color 0.2s;
+}
+
+html.dark body {
+  background: #0f172a;
+}
+
+/* Page headings */
+.heading-primary {
+  font-size: 1.75rem;
+  /* slightly smaller */
+  font-weight: 600;
+  color: var(--text);
+  margin-bottom: 1.5rem;
+  letter-spacing: -0.01em;
+}
+
+/* Section labels (WORK / PROJECTS etc.) */
+.section-label {
+  font-size: 0.875rem;
+  color: var(--accent);
+  text-transform: uppercase;
+  letter-spacing: 0.28em;
+  font-weight: 600;
+  margin-bottom: 0.75rem;
+}
+
+/* Item titles and subtext */
+.item-title {
+  font-weight: 600;
+  color: var(--text);
+}
+
+.item-sub {
+  color: var(--muted);
+  font-size: 0.875rem;
+  margin-top: 0.25rem;
+}
+
+/* Minimal top navbar layout */
+.minimal-navbar {
+  position: fixed;
+  top: 1rem;
+  left: 2.5rem;
+  right: 2.5rem;
+  z-index: 999;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  pointer-events: none;
+}
+
+.minimal-navbar .brand {
+  pointer-events: auto;
+  font-size: 0.95rem;
+  font-weight: 600;
+  text-transform: lowercase;
+  color: var(--text);
+}
+
+.minimal-navbar .nav-vertical {
+  pointer-events: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 0.4rem;
+}
+
+.minimal-navbar a.nav-link {
+  color: #9ca3af;
+  text-decoration: none;
+  font-size: 0.95rem;
+  font-weight: 500;
+  text-transform: lowercase;
+}
+
+.minimal-navbar a.nav-link.active {
+  color: var(--accent);
+  font-weight: 700;
+}
+
+/* Body paragraph style for more readable, serif-forward text */
+.body-text {
+  color: #2D3748;
+  font-size: 1rem;
+  /* slightly smaller */
+  line-height: 1.95;
+}
+
+html.dark .body-text {
+  color: #d1d5db;
+}
+
+@media (max-width: 640px) {
+  .minimal-navbar {
+    left: 1rem;
+    right: 1rem;
+    top: 0.75rem;
+  }
+
+  .minimal-navbar .nav-vertical {
+    flex-direction: row;
+    gap: 0.75rem;
+    align-items: center;
+  }
+}
+
+/* gallery layout */
+.gallery-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 1.5rem;
+}
+
+@media (max-width: 640px) {
+  .gallery-grid {
+    grid-template-columns: repeat(1, minmax(0, 1fr));
+  }
+}
+
+.polaroid {
+  background: white;
+  padding: 1rem 0.5rem 2rem;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  border-radius: 0.25rem;
+  text-align: center;
+}
+
+html.dark .polaroid {
+  background: #1e293b;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.5);
+}
+
+.polaroid img {
+  display: block;
+  margin: 0 auto;
+  max-width: 100%;
+  height: auto;
+}
+
+.caption {
+  margin-top: 0.5rem;
+  font-size: 0.875rem;
+  color: #374151;
+}
+
+html.dark .caption {
+  color: #9ca3af;
+}
+
+/* marker-style caption font */
+.marker {
+  font-family: Georgia, 'Times New Roman', Times, serif;
+  font-style: italic;
+}
+
+/* Page fade animations */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes fadeOut {
+  from {
+    opacity: 1;
+  }
+
+  to {
+    opacity: 0;
+  }
+}
+
+.fade-in {
+  animation: fadeIn 0.4s ease-in;
+}
+
+.fade-out {
+  animation: fadeOut 0.6s ease-out;
+}
+
+/* Theme toggle button */
+.theme-toggle {
+  pointer-events: auto;
+  background: none;
+  border: 1px solid rgba(0, 0, 0, 0.2);
+  color: var(--text);
+  cursor: pointer;
+  padding: 0.35rem 0.5rem;
+  border-radius: 0.25rem;
+  transition: background-color 0.2s;
+  font-size: 0.875rem;
+  display: flex;
+  align-items: center;
+  gap: 0.25rem;
+}
+
+html.dark .theme-toggle {
+  border-color: rgba(255, 255, 255, 0.1);
+}
+
+.theme-toggle:hover {
+  background-color: rgba(0, 0, 0, 0.05);
+}
+
+html.dark .theme-toggle:hover {
+  background-color: rgba(255, 255, 255, 0.05);
+}
+
+.icon-container {
+  position: relative;
+  width: 16px;
+  height: 16px;
+  display: inline-block;
+}
+
+.icon-container svg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  transition: opacity 0.3s ease, transform 0.3s ease;
+  width: 100%;
+  height: 100%;
+}
+
+.icon-container.light .sun-icon {
+  opacity: 1;
+  transform: translateY(0) scale(1);
+}
+
+.icon-container.light .moon-icon {
+  opacity: 0;
+  transform: translateY(10px) scale(0.8);
+}
+
+.icon-container.dark .sun-icon {
+  opacity: 0;
+  transform: translateY(-10px) scale(0.8);
+}
+
+.icon-container.dark .moon-icon {
+  opacity: 1;
+  transform: translateY(0) scale(1);
+}
+
+/* Social media buttons in about page */
+a[href*="github.com"],
+a[href*="linkedin.com"],
+a[href^="mailto:"] {
+  color: #111827;
+  transition: color 0.2s;
+}
+
+html.dark a[href*="github.com"],
+html.dark a[href*="linkedin.com"],
+html.dark a[href^="mailto:"] {
+  color: #f3f4f6;
+}
+
+a[href*="github.com"] img,
+a[href*="linkedin.com"] img,
+a[href^="mailto:"] img {
+  filter: none;
+  transition: filter 0.2s;
+}
+
+html.dark a[href*="github.com"] img,
+html.dark a[href*="linkedin.com"] img,
+html.dark a[href^="mailto:"] img {
+  filter: brightness(0) invert(1);
+}
