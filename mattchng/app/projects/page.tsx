@@ -12,7 +12,7 @@ const projects: {
     {
       title: "Orbit - ai interview prep assistant",
       date: "Sep 2025 - Present",
-      description: "•	Architected full-stack, Dockerized microservices platform deployed to the cloud, totaling ~5,000 LOC across 24 commits \n•	Engineered real-time TTS voice pipeline using LiveKit and Google Cloud, achieving 2.83s average end-to-end latency \n•	Fine-tuned Gemini 2.5 model, improving accuracy and reducing average response length from 254 to 138 characters \n•	Built RAG system over DynamoDB with semantic search, reducing hallucinated code leakage from 17.5% (base) to 5.0% ",
+      description: "AI-powered interview preparation assistant that provides personalized feedback",
       tags: ["next.js", "fastapi", "python", "google gemini", "livekit", "Vertex AI (Gemini)", "Docker"],
       links: [
         { label: "slides", href: "/OrbitPresentation.pdf" },
