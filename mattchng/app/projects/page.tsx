@@ -9,31 +9,50 @@ const projects: {
   tags: string[];
   links: { label: string; href: string }[];
 }[] = [
-    {
-      title: "project title",
-      date: "month year",
-      description: "Short description of what this project does.",
-      tags: ["tag1", "tag2"],
-      links: [{ label: "github", href: "#" }],
-    },
-    {
-      title: "project title",
-      date: "month year",
-      description: "Short description of what this project does.",
-      tags: ["tag1", "tag2"],
-      links: [
-        { label: "live", href: "#" },
-        { label: "github", href: "#" },
-      ],
-    },
-    {
-      title: "project title",
-      date: "month year",
-      description: "Short description of what this project does.",
-      tags: ["tag1", "tag2"],
-      links: [{ label: "github", href: "#" }],
-    },
-  ];
+  {
+    title: "orbit - ai interview prep assistant",
+    date: "",
+    description: "",
+    tags: ["next.js", "fastapi", "python", "google gemini", "livekit"],
+    links: [
+      { label: "slides", href: "/OrbitPresentation.pdf" },
+      { label: "github", href: "https://github.com/axie22/Orbit" },
+    ],
+  },
+  {
+    title: "pr analysis github app",
+    date: "",
+    description: "",
+    tags: ["typescript", "react", "playwright", "google gemini"],
+    links: [
+      { label: "live", href: "https://aura-aolmw.ondigitalocean.app/" },
+      { label: "github", href: "https://github.com/axie22/Aura" },
+    ],
+  },
+  {
+    title: "marketing genai - ml model",
+    date: "",
+    description: "",
+    tags: ["python", "pytorch", "scikit-learn", "pandas"],
+    links: [
+      { label: "github", href: "https://github.com/jia-q1/TrustworthyLab_GES_Hackathon" },
+    ],
+  },
+  {
+    title: "maps routing project",
+    date: "",
+    description: "work in progress",
+    tags: [],
+    links: [],
+  },
+  {
+    title: "social cooking app",
+    date: "",
+    description: "work in progress",
+    tags: [],
+    links: [],
+  },
+];
 
 export default function ProjectsPage() {
   return (
