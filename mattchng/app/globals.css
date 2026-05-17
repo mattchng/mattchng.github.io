@@ -324,3 +324,35 @@ html.dark .project-card {
   background: rgba(123, 155, 224, 0.12);
   color: var(--accent);
 }
+
+/* Interests page */
+.interests-intro {
+  font-style: italic;
+  color: var(--muted);
+  font-size: 1rem;
+  margin-bottom: 3rem;
+}
+
+.interests-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 3rem 2rem;
+}
+
+@media (max-width: 480px) {
+  .interests-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+.interests-label {
+  font-size: 0.8rem;
+  color: var(--muted);
+  margin-bottom: 0.75rem;
+}
+
+.interests-item {
+  font-size: 1rem;
+  color: var(--text);
+  line-height: 1.4;
+}
