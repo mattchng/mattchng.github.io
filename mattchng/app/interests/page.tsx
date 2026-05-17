@@ -4,7 +4,7 @@ import Navbar from "@/components/Navbar";
 const categories = [
   {
     label: "sports",
-    items: ["golf", "skiing", "badminton", "tennis", "volleyball", "cycling", "swimming", "table tennis"],
+    items: ["golf", "skiing", "badminton", "tennis", "volleyball", "cycling"],
   },
   {
     label: "films",
@@ -39,7 +39,7 @@ export default function InterestsPage() {
       <div className="min-h-screen">
         <Navbar />
         <main className="pt-24 px-6 pb-16 fade-in">
-          <p className="interests-intro">My interests and hobbies</p>
+          <p className="interests-intro">some of my interests and hobbies</p>
           <div className="interests-grid">
             {categories.map((cat) => (
               <div key={cat.label}>
