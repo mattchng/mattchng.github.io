@@ -22,11 +22,11 @@ const categories = [
     label: "books",
     items: ["I am not jessica chen", "crying in H-mart", "item 3"],
   },
+  */
   {
     label: "music",
     items: ["All In - Marino", "Best Of Me - BTS", "Everything Goes On - Porter Robinson", "Piano Concerto No. 2 - Rachmaninoff"],
   },
-  */
   {
     label: "other hobbies",
     items: ["music", "photography", "digital design", "traveling", "cooking", "learning languages (currently korean)"],
