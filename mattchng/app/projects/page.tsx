@@ -9,50 +9,50 @@ const projects: {
   tags: string[];
   links: { label: string; href: string }[];
 }[] = [
-  {
-    title: "orbit - ai interview prep assistant",
-    date: "",
-    description: "",
-    tags: ["next.js", "fastapi", "python", "google gemini", "livekit"],
-    links: [
-      { label: "slides", href: "/OrbitPresentation.pdf" },
-      { label: "github", href: "https://github.com/axie22/Orbit" },
-    ],
-  },
-  {
-    title: "pr analysis github app",
-    date: "",
-    description: "",
-    tags: ["typescript", "react", "playwright", "google gemini"],
-    links: [
-      { label: "live", href: "https://aura-aolmw.ondigitalocean.app/" },
-      { label: "github", href: "https://github.com/axie22/Aura" },
-    ],
-  },
-  {
-    title: "marketing genai - ml model",
-    date: "",
-    description: "",
-    tags: ["python", "pytorch", "scikit-learn", "pandas"],
-    links: [
-      { label: "github", href: "https://github.com/jia-q1/TrustworthyLab_GES_Hackathon" },
-    ],
-  },
-  {
-    title: "maps routing project",
-    date: "",
-    description: "work in progress",
-    tags: [],
-    links: [],
-  },
-  {
-    title: "social cooking app",
-    date: "",
-    description: "work in progress",
-    tags: [],
-    links: [],
-  },
-];
+    {
+      title: "Orbit - ai interview prep assistant",
+      date: "Sep 2025 - Present",
+      description: "•	Architected full-stack, Dockerized microservices platform deployed to the cloud, totaling ~5,000 LOC across 24 commits \n•	Engineered real-time TTS voice pipeline using LiveKit and Google Cloud, achieving 2.83s average end-to-end latency \n•	Fine-tuned Gemini 2.5 model, improving accuracy and reducing average response length from 254 to 138 characters \n•	Built RAG system over DynamoDB with semantic search, reducing hallucinated code leakage from 17.5% (base) to 5.0% ",
+      tags: ["next.js", "fastapi", "python", "google gemini", "livekit", "Vertex AI (Gemini)", "Docker"],
+      links: [
+        { label: "slides", href: "/OrbitPresentation.pdf" },
+        { label: "github", href: "https://github.com/axie22/Orbit" },
+      ],
+    },
+    {
+      title: "Pr analysis github app",
+      date: "Feb 2025 - Present",
+      description: "App that streamlines code review by showing visual changes directly into video in PR",
+      tags: ["typescript", "react", "playwright", "google gemini"],
+      links: [
+        { label: "live", href: "https://aura-aolmw.ondigitalocean.app/" },
+        { label: "github", href: "https://github.com/axie22/Aura" },
+      ],
+    },
+    {
+      title: "Marketing genai - ml model",
+      date: "Summer 2023",
+      description: "Machine learning model for marketing analysis",
+      tags: ["python", "pytorch", "scikit-learn", "pandas"],
+      links: [
+        { label: "github", href: "https://github.com/jia-q1/TrustworthyLab_GES_Hackathon" },
+      ],
+    },
+    {
+      title: "Maps routing project",
+      date: "Present",
+      description: "work in progress - NYC Subway Dynamic Mapper",
+      tags: [],
+      links: [],
+    },
+    {
+      title: "Social cooking app",
+      date: "Present",
+      description: "work in progress - a social media platform for sharing recipes and cooking tips",
+      tags: [],
+      links: [],
+    },
+  ];
 
 export default function ProjectsPage() {
   return (
