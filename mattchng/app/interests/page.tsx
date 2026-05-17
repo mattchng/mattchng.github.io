@@ -22,11 +22,11 @@ const categories = [
     label: "music",
     items: ["All In - Marino", "Best Of Me - BTS", "Everything Goes On - Porter Robinson", "Piano Concerto No. 2 - Rachmaninoff"],
   },
+  */
   {
     label: "other hobbies",
-    items: ["item 1", "item 2", "item 3"],
+    items: ["music", "photography", "digital design", "traveling", "cooking", "learning languages (currently korean)"],
   },
-  */
 ];
 
 export default function InterestsPage() {
