@@ -14,6 +14,10 @@ const categories = [
     label: "nyc food",
     items: ["editing in progress"],
   },
+  {
+    label: "board/card games",
+    items: ["catan", "ticket to ride", "coup", "scout", "startups", "chess"],
+  },
   /*{
     label: "books",
     items: ["I am not jessica chen", "crying in H-mart", "item 3"],
